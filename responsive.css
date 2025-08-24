@@ -1,23 +1,29 @@
-
 @media screen and (max-width: 560px) {
-  *{
+  * {
     font-family: "Edu NSW ACT Cursive", cursive;
   }
-  .nav_search{
+  .nav_search {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .animation{
+
+  header {
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+  .animation {
     padding: 18px;
   }
 
-  .toplanto, .plant_logo {
+  .toplanto,
+  .plant_logo {
     display: none !important;
   }
-  .Plants2{
+  .Plants2 {
     flex-direction: column-reverse;
   }
 }
-
- 
