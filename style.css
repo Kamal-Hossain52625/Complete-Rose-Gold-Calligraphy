@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  max-width: calc(100% - 10%);
+  margin: 0 auto;
+  background: #262e22;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Edu NSW ACT Cursive", cursive; */
+  z-index: -99;
+}
+a {
+  text-decoration: none;
+  touch-action: manipulation;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+
+:root {
+  --text-color: #fff;
+  --background-color: #000;
+  --backdrop-filter: blur(5px);
+}
+header {
+  position: relative;
+  background: url("./image/bg-image.jpg") no-repeat center;
+  background-attachment: fixed;
+}
+#NAV {
+  position: fixed;
+  z-index: 99;
+  width: calc(100% - 10%);
+  box-shadow: #426d01 1px 3px 3px 0px;
+}
+
+main {
+  background: #1b2316;
+}
+
+.container {
+  text-transform: capitalize;
+}
+
+.Polygon {
+  width: 2.2rem;
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s linear;
+}
+.Polygon:hover {
+  background-color: #029709d3;
+  border: 2px solid red;
+  scale: 1.1;
+  /* transform: translateX(1rem); */
+}
+
+.Live{
+  transition: all 0.3s linear;
+  font-weight: bold;
+
+}
+
+.hover-box:hover .Live {
+  color: rgb(255, 0, 242);
+}
+
+.review_img {
+  width: 100px;
+  background-color: rgb(172, 255, 255);
+  border-radius: 50%;
+}
+
+.review_img_div {
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  width: 400px;
+  border-radius: 1rem;
+}
+
+.rectangle1 {
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  width: 400px;
+  border-radius: 1rem;
+}
+.recangle1_img {
+  width: 200px;
+}
+.rectangle1_desc {
+  /* position: absolute; */
+  bottom: 1rem;
+  left: 5rem;
+}
+
+/* Our_Trendy_plants section */
+
+
+.rectangle2_wrapper {
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+.our_plants_img2 {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.monogram_tree {
+  /* position: absolute; */
+  width: 300px;
+  /* top: 0;
+  bottom: -5rem;
+  left: 0;
+  right: 0; */
+}
+/* .our_plants_img2::after{
+  content: '';
+  position: absolute;
+  background-image: url("./image/Logo(20) 2.png");
+  background-repeat: no-repeat;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */
+
+.Selling_wrapper {
+  margin: 0 auto;
+}
+
+.Selling_container {
+  position: relative;
+  background: #262e22;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+.Selling_container:hover {
+  cursor: pointer;
+  scale: 1.01;
+  box-shadow: 2px 3px 10px 2px #006300de;
+}
+.selling_btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* -- Customer Review -- */
+.Customer_Review {
+  margin-top: 5rem;
+}
+.Customer_desc {
+  text-align: justify;
+}
+
+.Best2_wrapper {
+  background: #262e22;
+  border-radius: 5rem;
+  transition: all .3s linear;
+}
+.Best2_wrapper:hover{
+  cursor: pointer;
+  scale: 1.01;
+  box-shadow: 2px 3px 10px 2px #006300de;
+}
+
+/*======= Footer Section ==========*/
+
+#footer{
+  z-index: -99;
+}
+.widget-title {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.fotter-middle {
+  margin-left: 3rem;
+}
+.rainbow {
+  text-transform: uppercase;
+}
+.art-and-love {
+  display: inline-block;
+}
+.btn {
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: color 0.3s ease-in-out, background-color 0.15s ease-in-out;
+}
+.btn2:hover {
+  color: #fff;
+}
+.btn-tag-green {
+  color: #28a745;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-green:hover {
+  background-color: #28a745;
+}
+.btn-tag-blue {
+  color: #007bff;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-blue:hover {
+  background-color: #007bff;
+}
+.btn-tag-violet {
+  color: #a66ff7;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-violet:hover {
+  background-color: #a66ff7;
+}
+.btn-tag-emerald {
+  color: #1ad6ac;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-emerald:hover {
+  background-color: #1ad6ac;
+}
+.btn-tag-salmon {
+  color: #ff788c;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-salmon:hover {
+  background-color: #ff788c;
+}
+.btn-tag-megenta {
+  color: #f81895;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-megenta:hover {
+  background-color: #f81895;
+}
+.btn-tag-sky {
+  color: #04bbf1;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-sky:hover {
+  background-color: #04bbf1;
+}
+.btn-tag-sapphire {
+  color: #416aef;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-sapphire:hover {
+  background-color: #416aef;
+}
+.btn-tag-brown {
+  color: #cc7401;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-brown:hover {
+  background-color: #cc7401;
+}
+.btn-tag-red {
+  color: #dc3545;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-red:hover {
+  background-color: #dc3545;
+}
+
+#EmailContainer {
+  position: relative;
+  margin-top: 2rem;
+}
+.fotter-form ::placeholder {
+  color: #e2e2e2;
+}
+
+#Name {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+#Email {
+  padding: 10px 60px 10px 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+.email {
+  margin-bottom: 2rem;
+}
+#textarea {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+#Subscribe {
+  position: absolute;
+  border: none;
+  background-color: #1ad6ac;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}
+#Subscribe:hover {
+  background-color: red;
+}
+

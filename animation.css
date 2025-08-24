@@ -1,0 +1,367 @@
+.animation {
+  position: relative;
+  border-radius: 1rem;
+  padding: 20px;
+  background: #262e22;
+  z-index: 1;
+}
+
+.animation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    purple,
+    red
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 8s linear infinite;
+  z-index: -1;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* @keyframes borderGradient {
+  0% {
+    border-image-source: linear-gradient(45deg, red, blue);
+  }
+  50% {
+    border-image-source: linear-gradient(135deg, purple, cyan);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, red, blue);
+  }
+} */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  position: relative;
+}
+.plant_logo {
+  position: absolute;
+  top: 1rem;
+  left: -2rem;
+  width: auto;
+}
+
+.toplanto {
+  position: absolute;
+  top: 7px;
+  left: 5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(
+    270deg,
+    #87e7ff,
+    #f3f0ef,
+    #dd2476,
+    #24c6dc,
+    #ff4203
+  );
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #0bffca !important;
+  scale: 1.1;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 0px;
+  height: 2px;
+  background: #0bffca;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.navbar-toggler-icon {
+  position: absolute;
+  right: 10px;
+  top: 3rem;
+  border-radius: 5px;
+  background-color: #00d9ff;
+  border: 3px solid red;
+  filter: invert(100%);
+  size: 1rem;
+}
+
+/*  */
+.section_title {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+.section_title::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  color: red;
+}
+
+.section_title::before {
+  content: "";
+  position: absolute;
+  border: 2px solid red;
+  width: 3rem;
+  height: 2rem;
+  border-top: none;
+  border-right: none;
+  border-radius: 5px;
+  bottom: 0;
+  left: -8px;
+  animation: BorderAnimation 3s infinite linear;
+}
+.section_title::after {
+  content: "";
+  position: absolute;
+  border: 2px solid red;
+  width: 3rem;
+  height: 2rem;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 5px;
+  top: 0;
+  right: -8px;
+  animation: BorderAnimation2 3s infinite;
+}
+
+@keyframes BorderAnimation {
+  0% {
+    border-color: #000;
+  }
+  25% {
+    border-color: #ff0707;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: #71fab6;
+  }
+}
+@keyframes BorderAnimation2 {
+  0% {
+    border-color: #71fab6;
+  }
+  25% {
+    border-color: #ffffff;
+  }
+  50% {
+    border-color: #ff0707;
+  }
+  100% {
+    border-color: #000;
+  }
+}
+
+.Slider_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#Slideimg {
+  width: 200px;
+  /* height: 100%; */
+  /* height: 350px; */
+  object-fit: cover;
+  display: block;
+}
+
+/*  */
+:root {
+  /* Tweak these to customize */
+  --speed: 28s; /* lower = faster */
+  --gap: 1rem; /* space between slides */
+  --slide-size: clamp(220px, 28vw, 360px);
+  --bg: #0f172a; /* page background */
+  --fade: 90px; /* width of side fade shadows */
+  --radius: 1.25rem; /* slide corner radius */
+}
+
+.wrap {
+  width: min(100%);
+  padding: 3rem 0;
+}
+.side_wrapper {
+  width: min(100%);
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative edge fades (no interaction blocking) */
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: var(--fade);
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), #0f172a00);
+}
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), #0f172a00);
+}
+
+.track {
+  display: flex;
+  gap: var(--gap);
+  width: max-content;
+  align-items: stretch;
+  animation: scroll var(--speed) linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+
+.slide {
+  flex: 0 0 var(--slide-size);
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #111827;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*  */
+/* scroll arrow  */
+.scroll_up > a {
+  border: 2px solid green;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #ff0000;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s linear;
+  position: fixed;
+  right: 5%;
+  bottom: 30px;
+  animation: up_down 2s infinite;
+  z-index: 10;
+}
+.scroll_up > a:hover {
+  background-color: green;
+  border: 2px solid #ff0000;
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes up_down {
+  0% {
+    margin-bottom: 30px;
+  }
+  50% {
+    margin-bottom: 60px;
+  }
+  100% {
+    margin-bottom: 30px;
+  }
+}
+
+.text4 {
+  position: relative;
+  z-index: 10;
+}
+.text4::after {
+  content: "";
+  position: absolute;
+  background-image: url("./image/Planto.png");
+  background-repeat: no-repeat;
+  width: 10rem;
+  top: -4rem;
+  left: -5rem;
+  right: 0;
+  bottom: 0;
+}
+.text4::before {
+  content: "Planto";
+  position: absolute;
+  width: 100%;
+  color: #80c56e;
+  top: -2rem;
+  left: 5rem;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(
+    270deg,
+    #87e7ff,
+    #f3f0ef,
+    #dd2476,
+    #24c6dc,
+    #ff4203
+  );
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
