@@ -13,9 +13,11 @@
   header {
     margin: 0 auto;
   }
-
   main {
     margin: 0 auto;
+  }
+  #our_trendy_plants2{
+    flex-direction: column-reverse;
   }
   .animation {
     padding: 18px;
@@ -25,13 +27,28 @@
   .plant_logo {
     display: none !important;
   }
-  .Plants2 {
-    flex-direction: column-reverse;
-  }
 
   .Live {
     text-wrap: nowrap;
   }
+  #Slideimg{
+    margin-left: 0;
+    height: 200px;
+  }
+  .monogram_tree{
+    transform: translateY(3rem);
+    margin-left: 2.5rem;
+  }
+  .nav-link::after {
+  bottom: 5px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+
+}
+.nav-link:hover::after {
+  width: 80px;
+}
 }
 
 @media screen and (max-width: 768px) {

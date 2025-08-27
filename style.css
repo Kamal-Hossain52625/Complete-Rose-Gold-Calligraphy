@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 body {
   max-width: calc(100% - 10%);
@@ -27,16 +26,18 @@ li {
   --background-color: #000;
   --backdrop-filter: blur(5px);
 }
-header {
-  position: relative;
-  background: url("./image/bg-image.jpg") no-repeat center;
-  background-attachment: fixed;
-}
+
 #NAV {
   position: fixed;
   z-index: 99;
   width: calc(100% - 10%);
   box-shadow: #426d01 1px 3px 3px 0px;
+}
+
+header {
+  position: relative;
+  background: url("./image/bg-image.jpg") no-repeat center;
+  background-attachment: fixed;
 }
 
 main {
@@ -62,10 +63,10 @@ main {
   /* transform: translateX(1rem); */
 }
 
-.Live{
+.Live {
   transition: all 0.3s linear;
   font-weight: bold;
-
+  text-wrap: nowrap;
 }
 
 .hover-box:hover .Live {
@@ -85,6 +86,17 @@ main {
   border-radius: 1rem;
 }
 
+.image-logo {
+  height: 245px;
+  width: 220px;
+  margin: 0px 45px;
+  padding: 0px;
+}
+
+.image-float {
+  transform: translateY(-60px);
+}
+
 .rectangle1 {
   padding: 1rem;
   backdrop-filter: blur(5px);
@@ -102,44 +114,27 @@ main {
 
 /* Our_Trendy_plants section */
 
-
 .rectangle2_wrapper {
   padding: 1rem;
   backdrop-filter: blur(5px);
   border-radius: 1rem;
 }
 
-.our_plants_img2 {
-  position: relative;
-  display: flex;
-  justify-content: end;
-}
 .monogram_tree {
-  /* position: absolute; */
-  width: 300px;
-  /* top: 0;
-  bottom: -5rem;
-  left: 0;
-  right: 0; */
+  margin-left: 8rem;
+
 }
-/* .our_plants_img2::after{
-  content: '';
-  position: absolute;
-  background-image: url("./image/Logo(20) 2.png");
-  background-repeat: no-repeat;
-  width: 300px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
+#Slideimg{
+  margin-left: 5rem;
+}
 
 .Selling_wrapper {
   margin: 0 auto;
 }
 
 .Selling_container {
-  position: relative;
+  height: 300px;
+  width: 350px;
   background: #262e22;
   border-radius: 2rem;
   padding: 1rem;
@@ -147,6 +142,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   transition: all 0.3s linear;
 }
 .Selling_container:hover {
@@ -158,6 +154,13 @@ main {
   display: flex;
   justify-content: space-around;
 }
+.Selling_img{
+  transform: translateY(-5rem);
+}
+.Selling_desc{
+  transform: translateY(-10rem);
+}
+
 
 /* -- Customer Review -- */
 .Customer_Review {
@@ -170,9 +173,9 @@ main {
 .Best2_wrapper {
   background: #262e22;
   border-radius: 5rem;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
-.Best2_wrapper:hover{
+.Best2_wrapper:hover {
   cursor: pointer;
   scale: 1.01;
   box-shadow: 2px 3px 10px 2px #006300de;
@@ -180,7 +183,7 @@ main {
 
 /*======= Footer Section ==========*/
 
-#footer{
+#footer {
   z-index: -99;
 }
 .widget-title {
@@ -333,4 +336,3 @@ main {
 #Subscribe:hover {
   background-color: red;
 }
-
